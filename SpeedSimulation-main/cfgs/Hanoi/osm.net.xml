@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-05-12 20:19:25 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+    </output>
+
+    <projection>
+        <proj value="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+</configuration>
+-->
+
+<net version="1.16" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="-11782525.54,-2385080.78" convBoundary="0.00,0.00,38.64,937.64" origBoundary="105.844228,20.942979,105.844575,20.950846" projParameter="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs"/>
+
+    <type id="highway.footway" priority="1" numLanes="1" speed="2.78" allow="pedestrian" oneway="1" width="2.00"/>
+    <type id="highway.trunk" priority="13" numLanes="2" speed="27.78" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" oneway="0"/>
+
+    <edge id=":6648125265_0" function="internal">
+        <lane id=":6648125265_0_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="5.08" shape="29.71,726.78 29.77,731.91"/>
+        <lane id=":6648125265_0_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="5.08" shape="26.51,726.84 26.57,731.92"/>
+        <lane id=":6648125265_0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="5.08" shape="23.31,726.90 23.37,731.92"/>
+    </edge>
+
+    <edge id="707456942" from="6648125266" to="6648125265" priority="1" type="highway.footway" spreadType="center">
+        <lane id="707456942_0" index="0" allow="pedestrian" speed="2.78" length="20.25" width="2.00" shape="0.00,729.55 20.25,729.43">
+            <param key="origId" value="707456942"/>
+        </lane>
+    </edge>
+    <edge id="817484210#0" from="2326809909" to="6648125265" name="Đường Ngọc Hồi" priority="13" type="highway.trunk" spreadType="center" shape="2.65,0.00 4.09,7.49 28.68,113.31 34.11,144.28 37.09,173.71 38.64,199.07 38.56,236.27 38.48,243.84 37.83,258.49 37.24,264.36 29.43,372.89 27.57,435.98 23.59,570.80 26.56,729.40">
+        <lane id="817484210#0_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="730.90" shape="5.79,-0.60 7.22,6.82 31.81,112.67 37.28,143.85 40.28,173.46 41.84,198.97 41.76,236.28 41.68,243.92 41.02,258.72 40.42,264.64 32.63,373.05 30.77,436.08 26.79,570.82 29.71,726.78">
+            <param key="origId" value="817484210"/>
+        </lane>
+        <lane id="817484210#0_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="730.90" shape="2.65,0.00 4.09,7.49 28.68,113.31 34.11,144.28 37.09,173.71 38.64,199.07 38.56,236.27 38.48,243.84 37.83,258.49 37.24,264.36 29.43,372.89 27.57,435.98 23.59,570.80 26.51,726.84">
+            <param key="origId" value="817484210"/>
+        </lane>
+        <lane id="817484210#0_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="730.90" shape="-0.49,0.60 0.95,8.15 25.54,113.95 30.94,144.72 33.90,173.97 35.44,199.16 35.36,236.26 35.28,243.75 34.63,258.25 34.05,264.09 26.24,372.73 24.38,435.89 20.39,570.79 23.31,726.90">
+            <param key="origId" value="817484210"/>
+        </lane>
+        <param key="ref" value="QL.1"/>
+    </edge>
+    <edge id="817484210#3" from="6648125265" to="5700952346" name="Đường Ngọc Hồi" priority="13" type="highway.trunk" spreadType="center" shape="26.56,729.40 26.59,745.57 26.38,759.38 25.49,784.11 24.29,805.28 19.59,853.95 11.50,937.64">
+        <lane id="817484210#3_0" index="0" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="206.39" shape="29.77,731.91 29.79,745.59 29.58,759.46 28.69,784.26 27.48,805.52 22.78,854.26 14.68,937.95">
+            <param key="origId" value="817484210"/>
+        </lane>
+        <lane id="817484210#3_1" index="1" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="206.39" shape="26.57,731.92 26.59,745.57 26.38,759.38 25.49,784.11 24.29,805.28 19.59,853.95 11.50,937.64">
+            <param key="origId" value="817484210"/>
+        </lane>
+        <lane id="817484210#3_2" index="2" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" speed="27.78" length="206.39" shape="23.37,731.92 23.39,745.55 23.18,759.29 22.30,783.96 21.10,805.04 16.41,853.64 8.31,937.33">
+            <param key="origId" value="817484210"/>
+        </lane>
+        <param key="ref" value="QL.1"/>
+    </edge>
+
+    <tlLogic id="6648125265" type="actuated" programID="0" offset="0">
+        <phase duration="79" state="GGG" minDur="13" maxDur="50"/>
+        <phase duration="6"  state="yyy"/>
+        <phase duration="5"  state="rrr"/>
+    </tlLogic>
+
+    <junction id="2326809909" type="dead_end" x="2.65" y="0.00" incLanes="" intLanes="" shape="-2.06,0.90 7.36,-0.90"/>
+    <junction id="5700952346" type="dead_end" x="11.50" y="937.64" incLanes="817484210#3_0 817484210#3_1 817484210#3_2" intLanes="" shape="16.28,938.10 6.72,937.18"/>
+    <junction id="6648125265" type="traffic_light" x="26.56" y="729.40" incLanes="817484210#0_0 817484210#0_1 817484210#0_2 707456942_0" intLanes=":6648125265_0_0 :6648125265_0_1 :6648125265_0_2" shape="21.77,731.93 31.37,731.91 31.31,726.75 21.71,726.93 21.56,727.76 21.36,728.05 21.07,728.26 20.70,728.39 20.24,728.43 20.25,730.43 21.09,730.60 21.39,730.80 21.60,731.09 21.72,731.47">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="6648125266" type="dead_end" x="0.00" y="729.55" incLanes="" intLanes="" shape="0.01,730.55 -0.01,728.55"/>
+
+    <connection from="817484210#0" to="817484210#3" fromLane="0" toLane="0" via=":6648125265_0_0" tl="6648125265" linkIndex="0" dir="s" state="O"/>
+    <connection from="817484210#0" to="817484210#3" fromLane="1" toLane="1" via=":6648125265_0_1" tl="6648125265" linkIndex="1" dir="s" state="O"/>
+    <connection from="817484210#0" to="817484210#3" fromLane="2" toLane="2" via=":6648125265_0_2" tl="6648125265" linkIndex="2" dir="s" state="O"/>
+
+    <connection from=":6648125265_0" to="817484210#3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":6648125265_0" to="817484210#3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":6648125265_0" to="817484210#3" fromLane="2" toLane="2" dir="s" state="M"/>
+
+</net>
